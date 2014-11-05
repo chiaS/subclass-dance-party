@@ -1,10 +1,17 @@
 body, html{
   height:100%;
+  width:100%;
 }
 body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background: url("img/30.jpg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow:hidden;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -20,13 +27,34 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.blinkyDancer{
-  border:10px solid red;
+.BlinkyDancer{
+  border:30px solid red;
+  position:absolute;
+ // display:block;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+
+}
+.PrettyDancer {
+  border:10px solid green;
   border-radius:10px;
   position:absolute;
 }
-.prettyDancer {
-  border:10px solid blue;
-  border-radius:10px;
-  position:absolute;
+.SantaDancer{
+ //display: block;
+ background-image: url("img/r6.gif");
+ background-repeat:no-repeat;
+ height: 300px;
+ width: autopx;
 }
+.newcolor{
+  border:30px solid white;
+}
+.anothercolor{
+  border:30px solid green;
+
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

@@ -19,23 +19,32 @@ $(document).ready(function(){
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
-
+    console.log(dancerMakerFunctionName + 'adsf');
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+
+
+    if(dancerMakerFunctionName === "BlinkyDancer"){
+      dancer.checkDistance(window.dancers);
+    }else if(dancerMakerFunctionName === "PrettyDancer"){
+      dancer.mouseMove();
+    }
+
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+
+
   });
 
   $(".lineUpButton").on("click", function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
-   //   if (window.dancers[i] instanceOf makePrettyDancer) {
        window.dancers[i].lineUp(10, 10);
-      //}
     }
   });
+
 
 
 });
