@@ -21,6 +21,10 @@ BlinkyDancer.prototype.step = function(){
   //this.$node.toggle();
 };
 
+BlinkyDancer.prototype.lineUp = function(x,y) {
+  this.setPosition(this.left, 200);
+};
+
 BlinkyDancer.prototype.checkDistance = function(arr) {
   for(var i=0; i<arr.length; i++){
     if (arr[i] instanceof BlinkyDancer) {

@@ -28,13 +28,13 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .BlinkyDancer{
-  border:30px solid red;
   position:absolute;
- // display:block;
+  background: url("img/snowflake.png") no-repeat;
+  height: 100px;
+  width: 100px;
   -webkit-animation:spin 4s linear infinite;
   -moz-animation:spin 4s linear infinite;
   animation:spin 4s linear infinite;
-
 }
 .PrettyDancer {
   border:10px solid green;
@@ -46,15 +46,11 @@ body, a:link, a:visited, a:active{
  background-image: url("img/r6.gif");
  background-repeat:no-repeat;
  height: 300px;
- width: autopx;
+ width: 400px;
+ position: absolute;
 }
-.newcolor{
-  border:30px solid white;
-}
-.anothercolor{
-  border:30px solid green;
 
-}
+
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

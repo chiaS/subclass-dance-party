@@ -18,12 +18,7 @@ SantaDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
 };
-
-// makeSantaDancer.prototype.lineUp = function(x,y) {
-//   this.setPosition(x, y);
-//    var styleSettings = {
-//     top: x,
-//     left: y
-//   };
-//   this.$node.css(styleSettings);
-// };
+SantaDancer.prototype.lineUp = function(x,y) {
+  console.log('line');
+  this.setPosition(500, this.top);
+};

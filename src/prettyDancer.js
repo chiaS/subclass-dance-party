@@ -21,6 +21,7 @@ PrettyDancer.prototype.step = function(){
 };
 
 PrettyDancer.prototype.lineUp = function(x,y) {
+  console.log('line');
   this.setPosition(x, y);
 };
 
