@@ -29,6 +29,8 @@ $(document).ready(function(){
 
     if(dancerMakerFunctionName === "BlinkyDancer"){
       dancer.checkDistance(window.dancers);
+      dancer.mouseMove();
+
     }else if(dancerMakerFunctionName === "PrettyDancer"){
       dancer.mouseMove();
     }

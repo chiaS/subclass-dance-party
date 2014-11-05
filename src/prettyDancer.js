@@ -16,34 +16,33 @@ PrettyDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.animate({
     opacity:0.6,
-    width: "+=20px",
+    height: "+=20px",
       }, 500);
 };
 
 PrettyDancer.prototype.lineUp = function(x,y) {
-  console.log('line');
   this.setPosition(x, y);
 };
 
 PrettyDancer.prototype.mouseMove = function(){
-  var mouseY = 0;
+  var mouseX = 0;
   var over = 0;
   $('body').on('mousemove', function(e){
     if(over === 0){
-      mouseY = e.pageY;
+      mouseX = e.pageX;
     }
   });
   this.$node.bind('mousever mousemove', function(e) {
     over = 1;
-    if (e.pageY < mouseY) {
+    if (e.pageX < mouseX) {
       alert('over');
       //from bottom
       $(this).animate({
-        top:"-=50"
+        left:"-=50"
       }, 100);
     } else {
       $(this).animate({
-        top:"+=50"
+        left:"+=50"
       }, 100);
     }
 

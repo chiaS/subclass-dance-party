@@ -54,5 +54,32 @@ BlinkyDancer.prototype.checkDistance = function(arr) {
       }
     }
   }
+};
 
+BlinkyDancer.prototype.mouseMove = function(){
+  var mouseY = 0;
+  var over = 0;
+  $('body').on('mousemove', function(e){
+    if(over === 0){
+      mouseY = e.pageY;
+    }
+  });
+  this.$node.bind('mousever mousemove', function(e) {
+    over = 1;
+    if (e.pageY < mouseY) {
+      alert('over');
+      //from bottom
+      $(this).animate({
+        top:"-=50"
+      }, 100);
+    } else {
+      $(this).animate({
+        top:"+=50"
+      }, 100);
+    }
+
+  });
+  this.$node.bind('mouseout', function() {
+    over = 0;
+  });
 };
